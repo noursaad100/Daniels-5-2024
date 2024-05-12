@@ -1,0 +1,303 @@
+body{
+    margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Alegreya Sans', sans-serif;
+font-family: 'Alegreya SC', serif;
+font-family: 'Amatic SC', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto Flex', sans-serif;
+color: #343434;
+
+
+}
+:root{
+    --color1 :#f4f4f4;
+
+}
+
+p{
+    color: #748182;
+    font-size: 14px;
+    word-spacing: 2px;
+}
+ .section-head h3{
+    position: relative;
+    width: fit-content;
+    z-index: 99;
+}
+ .section-head h3::before{
+    content: '';
+    position: absolute;
+    background-image: url(../imgs/dots.png);
+    width: 100%;
+    height: 30px;
+    left: 0;
+    background-repeat: repeat;
+    z-index: -1;
+    top: 22px;
+
+}
+
+/* Start navbar */
+
+.nav-item a{
+    position: relative;
+}
+.nav-item a::before{
+    content: '';
+    position: absolute;
+    background-color: black;
+  width: 75%;
+    height: 3px;
+    top: 100%;
+    left: 10px;
+  display: none;
+    transition: all .4s ease-in-out;
+
+}
+
+.navbar-nav > li > a.active::before{
+    display: block;
+
+   
+ 
+}
+
+body:has(.home:target) .nav-item a::before{
+ display: block;
+}
+/* End navbar */
+
+/* Start Banner */
+.banner{
+    background-image: url(../imgs/bg.jpg);
+    background-size: cover;
+    height: 100vh;
+  
+}
+.banner::after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    opacity: .7;
+    height: 100vh;
+    width: 100%;
+}
+.data-banner h1{
+    font-size: 63px;
+    
+}
+.data-banner p{
+    color: white;
+}
+.data-banner {
+    z-index: 99;
+}
+.social-banner ul li span{
+    background-color: rgba(0, 0, 0, 0.445);
+    width: 35px;
+    height: 35px;
+}
+/* End Banner */
+
+/* Start about me */
+.img-about{
+    position: relative;
+}
+.img-about::before{
+    content: '';
+    position: absolute;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+    width: 80%;
+    height: 80%;
+    left: -37px;
+    bottom: -33px;
+   z-index: -1;
+}
+.about-me .text-about p{
+    color: #999;
+}
+.about-me .button-data button{
+    border-radius: 5px;
+}
+.about-me .button-data .btn1:hover{
+    background-color: white;
+    color: black !important;
+}
+.about-me .button-data .btn2:hover{
+background-color: #212529;
+color: white;
+}
+/* End about me */
+
+/* Start services */
+.service{
+    background-color: var(--color1);
+}
+
+
+.service-box{
+    border-radius: 9px;
+    padding: 2.5rem 1.3rem;
+
+}
+.icon{
+    color: rgba(0, 0, 0, 0.733);
+    width: 5em;
+    height: 5em;
+    background-color: var(--color1);
+    transition: all .4s;
+
+}
+ .service-box:hover .icon{
+ color:var(--color1);
+ background-color:black;
+ 
+}
+
+/* End services */
+/* Start portfolio */
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link, .nav-pills .nav-link {
+    color:black ;
+    background-color: transparent;
+   
+}
+.nav-pills li{
+    position: relative;
+}
+.nav-pills li::before{
+    content: '';
+    position: absolute;
+    background-color: black;
+  width:0;
+    height: 3px;
+    top: 100%;
+    left: 10px;
+    top: 76%;
+    left: 16px;
+
+ 
+    transition: all .4s ease-in-out;
+}
+.nav-pills li:has(.active)::before{
+width: 50%;
+
+}
+.portfolio .icon-layer .icon{
+    width: 2em;
+    height: 2em;
+}
+
+.portfolio .img-layer{
+    top: 5px;
+    left: 5px;
+    bottom: 5px;
+    right: 5px;
+    background: rgba(255, 255, 255, 0.95);
+    transition: all .4s;
+    transform: translateY(10px);
+    opacity: 0;
+}
+.portfolio .portfolio-img:hover .img-layer{
+    transform: translateY(0);
+   opacity: 1;
+}
+/* End portfolio */
+
+/* Start cleint */
+.client{
+        background-color: var(--color1);
+   
+}
+
+.carousel-indicators [data-bs-target]{
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+
+.carousel .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: gray;
+   border-radius: 100%;
+ }
+ .carousel .carousel-indicators button:hover{
+    background-color: gray !important;
+  
+ }
+ .carousel .author-img{
+    width: 90px;
+    height: 90px;
+ }
+/* End client */
+
+
+/* Start team */
+.team{
+    background-color: var(--color1);
+}
+.team .team-layer{
+    top: 2px;
+    left: 3px;
+    width: 98%;
+    height: 97%;
+    opacity: 0;
+    transition: all .5s;
+    transform: rotateY(180deg) scale(.5, .5);
+}
+
+.team .card:hover .team-layer{
+opacity: 1;
+transform: rotateY(0deg) scale(1, 1) ;
+cursor: pointer;
+}
+
+.team .card-img-top{
+    transition: all .5s;
+}
+
+.team .card-img-top:hover{
+    transform: scale(1.2);
+}
+.team  .icons a:hover{
+    background-color: white !important;
+    border: solid 1px black;
+}
+.team  .icons a:hover i{
+    color: black;
+}
+
+/* End team */
+
+
+/* Start contact */
+.contact .contact-data a{
+    background-color:var(--color1);
+    padding: 17px;
+}
+.contact .item:hover  a{
+background-color: black;
+}
+.contact .item:hover  i{
+    color: #eee;
+}
+
+.contact .form-contact .form-control{
+    border: none;
+    background-color: var(--color1);
+}
+.contact .form-contact .form-control:focus{
+    box-shadow: none;
+}
+.contact .form-contact button:hover{
+    background-color: white;
+    color: black !important;
+
+}
+/* End contact */
